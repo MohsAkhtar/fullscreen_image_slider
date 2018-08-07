@@ -31,3 +31,45 @@ body,
 .slide3 {
   background-image: url("images/image3.jpg");
 }
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slide-content span {
+  font-size: 5rem;
+  color: #fff;
+}
+
+/* working with border to create arrows*/
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -35px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#arrow-left {
+  border-width: 30px 40px 30px 0;
+  /* top: transparent, right: white, bottom: transparent, left: transparent
+    this creates a triangle */
+  border-color: transparent #fff transparent transparent;
+  /* pushes all the way to left */
+  left: 0;
+  /* margin pushes it slightly right to get in pos */
+  margin-left: 30px;
+}
+
+#arrow-right {
+  border-width: 30px 0 30px 40px;
+  border-color: transparent transparent transparent #fff;
+  right: 0;
+  margin-right: 30px;
+}
